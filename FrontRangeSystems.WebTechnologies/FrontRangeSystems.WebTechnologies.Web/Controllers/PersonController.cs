@@ -75,7 +75,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                await PersonService.UpdateAsync(model.Id, model);
+                await PersonService.UpdateAsync(model.PersonId, model);
                 return RedirectToAction("Index");
             }
             return View(model);

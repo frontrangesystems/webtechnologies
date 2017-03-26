@@ -17,20 +17,23 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
             DataContext = dataContext;
         }
 
-        private IDataContext DataContext { get; set; }
+        private IDataContext DataContext { get; }
 
+        /// <inheritdoc />
         public async Task<PersonModel> GetAsync(int id)
         {
-            var entity  = await DataContext.People.FirstOrDefaultAsync(p => p.Id == id);
-            return entity.Copy<Person,PersonModel>();
+            var entity = await DataContext.People.FirstOrDefaultAsync(p => p.PersonId == id);
+            return entity.Copy<Person, PersonModel>();
         }
 
+        /// <inheritdoc />
         public async Task<List<PersonModel>> GetAsync()
         {
-            var entities = await DataContext.People.ToListAsync();
+            var entities = await DataContext.People.OrderBy(p => p.LastName).ThenBy(p => p.FirstName).ToListAsync();
             return entities.Select(e => e.Copy<Person, PersonModel>()).ToList();
         }
 
+        /// <inheritdoc />
         public async Task UpdateAsync(int id, PersonModel model)
         {
             var entity = model.Copy<PersonModel, Person>();
@@ -38,6 +41,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
             await DataContext.SaveChangesAsync();
         }
 
+        /// <inheritdoc />
         public async Task<PersonModel> CreateAsync(PersonModel model)
         {
             var entity = model.Copy<PersonModel, Person>();
@@ -48,9 +52,10 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
             return entity.Copy<Person, PersonModel>();
         }
 
+        /// <inheritdoc />
         public async Task DeleteAsync(int id)
         {
-            var entity = await DataContext.People.FirstOrDefaultAsync(p => p.Id == id);
+            var entity = await DataContext.People.FirstOrDefaultAsync(p => p.PersonId == id);
 
             if (entity != null)
             {

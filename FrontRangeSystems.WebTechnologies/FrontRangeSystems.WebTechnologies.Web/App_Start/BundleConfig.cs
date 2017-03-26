@@ -23,6 +23,23 @@ namespace FrontRangeSystems.WebTechnologies.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            var js = "*.js";
+
+            bundles.Add(new ScriptBundle("~/Angular/1x").Include(
+                    "~/scripts/angular.js",
+                    "~/scripts/angular-route.js",
+                    "~/scripts/angular-ui-router.js",
+                    "~/scripts/angular-resource.js")
+                .IncludeDirectory("~/app/angular1/services", js, true)
+                .IncludeDirectory("~/app/angular1", js, false)
+                .IncludeDirectory("~/app/angular1", js, true)
+            );
+
+            bundles.Add(new ScriptBundle("~/Angular/2").Include(
+                "~/scripts/angular.js",
+                "~/scripts/angular-route.js"
+            ));
         }
     }
 }

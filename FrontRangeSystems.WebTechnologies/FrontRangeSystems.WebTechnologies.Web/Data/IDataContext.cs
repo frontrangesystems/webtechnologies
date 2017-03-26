@@ -7,10 +7,10 @@ namespace FrontRangeSystems.WebTechnologies.Web.Data
 {
     public interface IDataContext
     {
+        IDbSet<Person> People { get; }
+        IDbSet<Organization> Organizations { get; }
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
         DbEntityEntry Entry(object entity);
-        int SaveChanges();
         Task<int> SaveChangesAsync();
-        IDbSet<Person> People { get; }
     }
 }

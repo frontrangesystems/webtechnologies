@@ -9,6 +9,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Data
         {
         }
 
+        public IDbSet<Organization> Organizations { get; set; }
         public IDbSet<Person> People { get; set; }
     }
 }

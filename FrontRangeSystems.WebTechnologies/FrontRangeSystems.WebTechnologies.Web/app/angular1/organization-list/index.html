@@ -1,0 +1,19 @@
+﻿<h1>Org List</h1>
+
+<div class="alert alert-info" ng-show="loading">Loading...</div>
+<table ng-show="organizations" class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="org in organizations">
+        <td><a ng-href="/angular1/organization/{{org.organizationId}}">{{org.organizationId}}</a></td>
+        <td>{{org.name}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<pre>{{organizations | json}}</pre>

@@ -156,6 +156,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\angular2\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -193,23 +194,42 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\Api\OrganizationId.cs" />
     <Compile Include="Controllers\Api\PersonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrganizationsController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\IDataContext.cs" />
+    <Compile Include="Entity\Organization.cs" />
     <Compile Include="Entity\Person.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ObjectExtensions.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\OrganizationModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Contracts\IOrganizationService.cs" />
     <Compile Include="Services\Contracts\IPersonService.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
     <Compile Include="Services\PersonService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\angular1\app.js" />
+    <Content Include="app\angular1\organization\index.html" />
+    <Content Include="app\angular1\organization\organizationController.js" />
+    <Content Include="app\angular1\organization-list\index.html" />
+    <Content Include="app\angular1\organization-list\organizationListController.js" />
+    <Content Include="app\angular1\home\index.html" />
+    <Content Include="app\angular1\home\homeController.js" />
+    <Content Include="app\angular1\person-list\index.html" />
+    <Content Include="app\angular1\person-list\personListController.js" />
+    <Content Include="app\angular1\person\personController.js" />
+    <Content Include="app\angular1\person\index.html" />
+    <Content Include="app\angular1\services\personService.js" />
+    <Content Include="app\angular1\services\organizationService.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -245,8 +265,20 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -280,6 +312,11 @@
     <Content Include="Views\Person\Delete.cshtml" />
     <Content Include="Views\Person\Details.cshtml" />
     <Content Include="Views\Person\Edit.cshtml" />
+    <Content Include="Views\Organizations\Create.cshtml" />
+    <Content Include="Views\Organizations\Delete.cshtml" />
+    <Content Include="Views\Organizations\Details.cshtml" />
+    <Content Include="Views\Organizations\Edit.cshtml" />
+    <Content Include="Views\Organizations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

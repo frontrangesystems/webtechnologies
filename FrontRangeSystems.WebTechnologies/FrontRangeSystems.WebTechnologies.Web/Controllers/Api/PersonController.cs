@@ -21,7 +21,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers.Api
 
         public async Task<IHttpActionResult> Get(int id)
         {
-            var model = PersonService.GetAsync(id);
+            var model = await PersonService.GetAsync(id);
             if (model == null)
             {
                 return NotFound();
@@ -33,12 +33,12 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers.Api
         public async Task<IHttpActionResult> Post(PersonModel model)
         {
             var created = await PersonService.CreateAsync(model);
-            return CreatedAtRoute("DefaultApi", new {controller = "Person", id = created.Id}, created);
+            return CreatedAtRoute("DefaultApi", new {controller = "Person", id = created.PersonId}, created);
         }
 
         public async Task<IHttpActionResult> Put(int id, PersonModel model)
         {
-            model.Id = id;
+            model.PersonId = id;
             await PersonService.UpdateAsync(id, model);
             return Ok();
         }

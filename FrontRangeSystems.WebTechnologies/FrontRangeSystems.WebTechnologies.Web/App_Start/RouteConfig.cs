@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace FrontRangeSystems.WebTechnologies.Web
@@ -12,6 +8,9 @@ namespace FrontRangeSystems.WebTechnologies.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute("angular1", "angular1/{*catchall}", new { controller = "Home", action = "Angular1" });
+            routes.MapRoute("angular2", "angular2/{*catchall}", new { controller = "Home", action = "Angular2" });
 
             routes.MapRoute(
                 name: "Default",
