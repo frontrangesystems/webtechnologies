@@ -22,19 +22,33 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
         /// <inheritdoc />
         public async Task<PersonModel> GetAsync(int id)
         {
-            var entity = await DataContext.People.FirstOrDefaultAsync(p => p.PersonId == id);
-            return entity.Copy<Person, PersonModel>();
+            var entity = await DataContext.People.Include(p=>p.Organization).FirstOrDefaultAsync(p => p.PersonId == id);
+            return CreateModel(entity);
         }
 
         /// <inheritdoc />
         public async Task<List<PersonModel>> GetAsync()
         {
-            var entities = await DataContext.People.OrderBy(p => p.LastName).ThenBy(p => p.FirstName).ToListAsync();
-            return entities.Select(e => e.Copy<Person, PersonModel>()).ToList();
+            var entities = await DataContext.People
+                .Include(p => p.Organization)
+                .OrderBy(p => p.LastName)
+                .ThenBy(p => p.FirstName)
+                .ToListAsync();
+            return entities.Select(CreateModel).ToList();
+        }
+
+        private PersonModel CreateModel(Person person)
+        {
+            var model = person.Copy<Person, PersonModel>();
+            if (person.Organization != null)
+            {
+                model.OrganizationName = person.Organization.Name;
+            }
+            return model;
         }
 
         /// <inheritdoc />
-        public async Task UpdateAsync(int id, PersonModel model)
+        public async Task UpdateAsync(PersonModel model)
         {
             var entity = model.Copy<PersonModel, Person>();
             DataContext.Entry(entity).State = EntityState.Modified;

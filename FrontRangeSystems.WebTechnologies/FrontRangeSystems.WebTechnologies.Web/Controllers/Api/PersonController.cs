@@ -36,10 +36,9 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers.Api
             return CreatedAtRoute("DefaultApi", new {controller = "Person", id = created.PersonId}, created);
         }
 
-        public async Task<IHttpActionResult> Put(int id, PersonModel model)
+        public async Task<IHttpActionResult> Put(PersonModel model)
         {
-            model.PersonId = id;
-            await PersonService.UpdateAsync(id, model);
+            await PersonService.UpdateAsync(model);
             return Ok();
         }
 

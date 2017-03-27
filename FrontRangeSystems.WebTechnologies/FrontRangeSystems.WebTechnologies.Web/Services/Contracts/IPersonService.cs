@@ -22,10 +22,9 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services.Contracts
         /// <summary>
         ///     Updates the person.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="model">The model.</param>
         /// <returns></returns>
-        Task UpdateAsync(int id, PersonModel model);
+        Task UpdateAsync(PersonModel model);
 
         /// <summary>
         ///     Creates a person.

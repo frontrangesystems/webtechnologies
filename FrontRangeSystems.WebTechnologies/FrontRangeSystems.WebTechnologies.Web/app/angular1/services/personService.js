@@ -20,10 +20,10 @@
                         method: "DELETE"
                     },
                     create: {
-                        medhot: "POST"
+                        method: "POST"
                     },
                     update: {
-                        method: "UPDATE"
+                        method: "Put"
                     }
                 }
             );

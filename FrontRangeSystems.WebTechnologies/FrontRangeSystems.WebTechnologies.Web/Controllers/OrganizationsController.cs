@@ -76,7 +76,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                await OrganizationService.UpdateAsync(organization.OrganizationId, organization);
+                await OrganizationService.UpdateAsync(organization);
                 return RedirectToAction("Index");
             }
             return View(organization);
