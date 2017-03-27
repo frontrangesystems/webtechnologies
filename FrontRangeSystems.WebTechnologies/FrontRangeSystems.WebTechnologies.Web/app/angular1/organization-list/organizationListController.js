@@ -10,14 +10,13 @@ app.controller("organizationListController",
         }
 
         var init = function() {
-            $scope.loading = true;
-            loadOrganizations();
+            $scope.$watch("$routeChangeSuccess", loadData);
         };
 
         init();
 
-        function loadOrganizations() {
-            console.log('waited');
+        function loadData() {
+            $scope.loading = true;
             $scope.organizations = organization.list(null,
                 function() { $scope.loading = false; },
                 function(data) { handleError(data); }
