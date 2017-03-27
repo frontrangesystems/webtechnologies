@@ -22,10 +22,9 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services.Contracts
         /// <summary>
         ///     Updates the organization.
         /// </summary>
-        /// <param name="id">The identifier.</param>
         /// <param name="model">The model.</param>
         /// <returns></returns>
-        Task UpdateAsync(int id, OrganizationModel model);
+        Task UpdateAsync(OrganizationModel model);
 
         /// <summary>
         ///     Creates an orginzation.

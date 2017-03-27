@@ -7,7 +7,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Entity
     {
         [Key]
         public int OrganizationId { get; set; }
-
+        [Required]
         public string Name { get; set; }
         public List<Person> Members { get; set; }
     }

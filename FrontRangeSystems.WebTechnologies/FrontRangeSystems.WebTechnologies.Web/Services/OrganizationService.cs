@@ -34,7 +34,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
         }
 
         /// <inheritdoc />
-        public async Task UpdateAsync(int id, OrganizationModel model)
+        public async Task UpdateAsync(OrganizationModel model)
         {
             var entity = model.Copy<OrganizationModel, Organization>();
             DataContext.Entry(entity).State = EntityState.Modified;

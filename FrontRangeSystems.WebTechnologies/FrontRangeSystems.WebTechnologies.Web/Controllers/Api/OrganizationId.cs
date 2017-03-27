@@ -38,10 +38,10 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers.Api
             return CreatedAtRoute("DefaultApi", new {controller = "Person", id = created.OrganizationId}, created);
         }
 
-        public async Task<IHttpActionResult> Put(int id, OrganizationModel model)
+        [HttpPut]
+        public async Task<IHttpActionResult> Put(OrganizationModel model)
         {
-            model.OrganizationId = id;
-            await OrganizationService.UpdateAsync(id, model);
+            await OrganizationService.UpdateAsync(model);
             return Ok();
         }
 

@@ -33,10 +33,10 @@ namespace FrontRangeSystems.WebTechnologies.Web.Migrations
 
         private void SeedPeople(DataContext context)
         {
-            var id = 201;
-            var poet = 101;
-            var author = 102;
-            var playwright = 103;
+            var id = 1;
+            var poet = 1;
+            var author = 2;
+            var playwright = 3;
             context.People.AddOrUpdate(
                 p=>p.PersonId,
                 new Person
@@ -151,13 +151,14 @@ namespace FrontRangeSystems.WebTechnologies.Web.Migrations
                     FirstName = "August",
                     LastName = "Wilson"
                 });
+
+            context.SaveChanges();
         }
 
         private void SeedOrganizations(DataContext context)
         {
-            var id = 101;
+            var id = 1;
             context.Organizations.AddOrUpdate(
-                o=>o.OrganizationId,
                 new Organization
                 {
                     OrganizationId = id++,
@@ -173,6 +174,8 @@ namespace FrontRangeSystems.WebTechnologies.Web.Migrations
                     OrganizationId = id++,
                     Name = "Playwrights"
                 });
+
+            context.SaveChanges();
         }
     }
 }

@@ -10,10 +10,8 @@
     </thead>
     <tbody>
     <tr ng-repeat="org in organizations">
-        <td><a ng-href="/angular1/organization/{{org.organizationId}}">{{org.organizationId}}</a></td>
-        <td>{{org.name}}</td>
+        <td>{{org.organizationId}}</td>
+        <td><a ng-href="/angular1/organization/{{org.organizationId}}">{{org.name}}</a></td>
     </tr>
     </tbody>
 </table>
-
-<pre>{{organizations | json}}</pre>

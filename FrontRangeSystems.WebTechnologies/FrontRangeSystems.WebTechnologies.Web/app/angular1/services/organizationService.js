@@ -23,7 +23,7 @@
                         medhot: "POST"
                     },
                     update: {
-                        method: "UPDATE"
+                        method: "PUT"
                     }
                 }
             );
