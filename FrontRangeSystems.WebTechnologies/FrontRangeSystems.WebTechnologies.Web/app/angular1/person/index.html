@@ -2,6 +2,8 @@
 
 <div class="alert alert-info" ng-show="loading">Loading...</div>
 
+<div class="container row"><label><input type="checkbox" ng-click="showModel = !showModel" /> Show Model</label></div>
+
 <h2>Details for {{model.firstName}} {{model.lastName}}</h2>
 
 <form class="form-horizontal" name="form" novalidate>
@@ -50,5 +52,4 @@
     </div>
 </form>
 
-
-<pre>{{model | json}}</pre>
+<pre ng-show="showModel">{{model | json}}</pre>

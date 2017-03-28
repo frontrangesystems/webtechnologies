@@ -58,6 +58,11 @@ namespace FrontRangeSystems.WebTechnologies.Web.Services
             if (entity != null)
             {
                 DataContext.Organizations.Remove(entity);
+                var people = DataContext.People.Where(p=>p.OrganizationId == id);
+                foreach (var person in people)
+                {
+                    person.OrganizationId = null;
+                }
                 await DataContext.SaveChangesAsync();
             }
         }

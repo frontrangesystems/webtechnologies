@@ -1,6 +1,7 @@
 ﻿"use strict";
 
-app.controller("personListController", [
+app.controller("personListController",
+[
     "$scope", "$route", "person",
     function($scope, $route, person) {
 
@@ -8,11 +9,27 @@ app.controller("personListController", [
             alert(JSON.stringify(data));
         }
 
-        var init = function () {
+        var init = function() {
             $scope.$watch("$routeChangeSuccess", loadData);
+            $scope.delete = deleteAction;
         };
 
         init();
+
+        function removeItem(item) {
+            var index = $scope.data.indexOf(item);
+            if (index >= 0) {
+                $scope.data.splice(index, 1);
+            }
+        }
+
+        function deleteAction(item) {
+            if (confirm("Are you sure you want to delete '" + item.firstName + " " + item.lastName + "'?")) {
+                person.delete({ id: item.personId },
+                    function() { removeItem(item); },
+                    function(data) { handleError(data); });
+            }
+        }
 
         function loadData() {
             $scope.loading = true;

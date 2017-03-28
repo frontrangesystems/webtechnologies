@@ -11,6 +11,8 @@ app.controller("organizationListController",
 
         var init = function() {
             $scope.$watch("$routeChangeSuccess", loadData);
+
+            $scope.delete = deleteAction;
         };
 
         init();
@@ -21,6 +23,21 @@ app.controller("organizationListController",
                 function() { $scope.loading = false; },
                 function(data) { handleError(data); }
             );
+        }
+
+        function removeItem(item) {
+            var index = $scope.organizations.indexOf(item);
+            if (index >= 0) {
+                $scope.organizations.splice(index, 1);
+            }
+        }
+
+        function deleteAction(item) {
+            if (confirm("Are you sure you want to delete the organization '" + item.name + "'?")) {
+                organization.delete({ id: item.organizationId },
+                    function() {removeItem(item)},
+                    function(data) { handleError(data); });
+            }
         }
     }
 ]);

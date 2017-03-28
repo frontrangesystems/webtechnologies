@@ -8,7 +8,7 @@ app.controller("organizationController",
             alert(JSON.stringify(data));
         }
 
-        var init = function () {
+        var init = function() {
             $scope.$watch("$routeChangeSuccess", loadData);
 
             $scope.save = save;
@@ -18,17 +18,25 @@ app.controller("organizationController",
         init();
 
         function loadData() {
-            $scope.loading = true;
-            var id = $route.current.params.id;
-            $scope.model = organization.get({ id: id },
-                function() { $scope.loading = false; },
-                function(data) { handleError(data); });
+            $scope.id = $route.current.params.id;
+            if ($scope.id > 0) {
+                $scope.loading = true;
+                $scope.model = organization.get({ id: $scope.id },
+                    function() { $scope.loading = false; },
+                    function(data) { handleError(data); });
+            }
         }
 
         function save(model) {
-            organization.update(model,
-                function() { goBack(); },
-                function(data) { handleError(data); });
+            if ($scope.id > 0) {
+                organization.update(model,
+                    function() { goBack(); },
+                    function(data) { handleError(data); });
+            } else {
+                organization.create(model,
+                    function() { goBack(); },
+                    function(data) { handleError(data); });
+            }
         }
 
         function goBack() {
