@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace FrontRangeSystems.WebTechnologies.Web
 {
@@ -37,8 +36,11 @@ namespace FrontRangeSystems.WebTechnologies.Web
             );
 
             bundles.Add(new ScriptBundle("~/Angular/2").Include(
-                "~/scripts/angular.js",
-                "~/scripts/angular-route.js"
+                "~/app/angular2/dist/inline.bundle.js",
+                "~/app/angular2/dist/polyfills.bundle.js",
+                "~/app/angular2/dist/styles.bundle.js",
+                "~/app/angular2/dist/vendor.bundle.js",
+                "~/app/angular2/dist/main.bundle.js"
             ));
         }
     }
