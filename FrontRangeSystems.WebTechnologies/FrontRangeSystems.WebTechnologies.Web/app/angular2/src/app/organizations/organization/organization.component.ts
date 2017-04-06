@@ -50,10 +50,6 @@ export class OrganizationComponent implements OnInit {
         }
     }
 
-    isAddMode() {
-        return isNaN(this.id);
-    }
-
     buildForm(data: Organization): void {
         this.organization = data;
         this.organizationForm = this.builder.group({
@@ -107,7 +103,7 @@ export class OrganizationComponent implements OnInit {
         this.router.navigate(['organizations']);
     }
 
-        toggleShowModel() {
+    toggleShowModel() {
         this.showModel = !this.showModel;
     }
 

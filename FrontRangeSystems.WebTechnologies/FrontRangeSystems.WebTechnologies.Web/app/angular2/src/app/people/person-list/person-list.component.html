@@ -1,3 +1,31 @@
-<p>
-  person-list works!
-</p>
+<h2>People</h2>
+
+<div class="container row"><label><input type="checkbox" [(ngModel)]="showModel" (click)="toggleShowModel()" /> Show Model</label></div>
+
+<a [routerLink]="['/person', 'new']" class="btn btn-success ng-scope"><span class="glyphicon glyphicon-plus"></span> Create New</a>
+
+<div *ngIf="data">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Organization</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of data">
+        <td>{{person.personId}}</td>
+        <td><a [routerLink]="['/person', person.personId]">{{person.firstName}}&nbsp;{{person.lastName}}</a></td>
+        <td><a *ngIf="person.organizationId" [routerLink]="['/organization', person.organizationId]">{{person.organizationName}}</a></td>
+        <td>
+          <button (click)="delete(person)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pre class="visible" [class.hidden]="!showModel">{{ data | json}}</pre>
+
+</div>
