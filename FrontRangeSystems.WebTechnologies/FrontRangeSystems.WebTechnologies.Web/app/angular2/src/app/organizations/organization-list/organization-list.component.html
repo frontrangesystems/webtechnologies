@@ -1,3 +1,7 @@
-<p>
-  organization-list works!
-</p>
+<ul>
+    <li *ngFor="let org of organizations">
+        {{org.organizationId}}: <a [routerLink]="['/organization', org.organizationId]">{{org.name}}</a>
+    </li>
+</ul>
+
+<pre>{{organizations | json}}</pre>

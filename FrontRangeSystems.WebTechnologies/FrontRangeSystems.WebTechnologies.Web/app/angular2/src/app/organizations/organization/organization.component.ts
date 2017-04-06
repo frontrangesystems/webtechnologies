@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrganizationService } from "app/services/organization.service";
 
 @Component({
   selector: 'app-organization',

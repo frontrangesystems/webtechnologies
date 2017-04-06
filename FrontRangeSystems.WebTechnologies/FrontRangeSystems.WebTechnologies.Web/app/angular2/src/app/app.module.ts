@@ -14,6 +14,9 @@ import { PersonComponent } from './people/person/person.component';
 import { OrganizationComponent } from './organizations/organization/organization.component';
 import { OrganizationListComponent } from './organizations/organization-list/organization-list.component';
 
+import { OrganizationService } from "app/services/organization.service"
+import { PersonService } from "app/services/person.service"
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -31,7 +34,10 @@ import { OrganizationListComponent } from './organizations/organization-list/org
         HttpModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        OrganizationService,
+        PersonService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

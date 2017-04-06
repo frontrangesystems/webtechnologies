@@ -373,6 +373,8 @@
     <TypeScriptCompile Include="app\angular2\src\app\app.module.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\dashboard\dashboard.component.spec.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\models\organization.model.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\models\person.model.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\nav\nav.component.spec.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\nav\nav.component.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\organizations\organization-list\organization-list.component.spec.ts" />
@@ -385,6 +387,10 @@
     <TypeScriptCompile Include="app\angular2\src\app\people\person-list\person-list.component.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\people\person\person.component.spec.ts" />
     <TypeScriptCompile Include="app\angular2\src\app\people\person\person.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\services\organization.service.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\services\organization.service.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\services\person.service.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\services\person.service.ts" />
     <TypeScriptCompile Include="app\angular2\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="app\angular2\src\environments\environment.ts" />
     <TypeScriptCompile Include="app\angular2\src\main.ts" />
