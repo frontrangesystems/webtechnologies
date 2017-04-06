@@ -1,7 +1,22 @@
-<ul>
-    <li *ngFor="let org of organizations">
-        {{org.organizationId}}: <a [routerLink]="['/organization', org.organizationId]">{{org.name}}</a>
-    </li>
-</ul>
+<div class="container row"><label><input type="checkbox" [(ngModel)]="showModel" (click)="toggleShowModel()" /> Show Model</label></div>
 
-<pre>{{organizations | json}}</pre>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let org of organizations">
+            <td>{{org.organizationId}}</td>
+            <td><a [routerLink]="['/organization', org.organizationId]">{{org.name}}</a></td>
+            <td>
+                <button (click)="delete(org.organizationId)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<pre class="visible" [class.hidden]="!showModel">{{organizations | json}}</pre>
