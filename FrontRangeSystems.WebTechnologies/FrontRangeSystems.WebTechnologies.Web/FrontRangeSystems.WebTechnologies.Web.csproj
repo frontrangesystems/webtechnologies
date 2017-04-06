@@ -28,6 +28,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -158,7 +159,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\angular2\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +235,28 @@
     <Content Include="app\angular1\person\index.html" />
     <Content Include="app\angular1\services\personService.js" />
     <Content Include="app\angular1\services\organizationService.js" />
+    <Content Include="app\angular2\.gitignore" />
+    <Content Include="app\angular2\karma.conf.js" />
+    <Content Include="app\angular2\protractor.conf.js" />
+    <Content Include="app\angular2\src\app\app.component.css" />
+    <Content Include="app\angular2\src\app\app.component.html" />
+    <Content Include="app\angular2\src\app\dashboard\dashboard.component.css" />
+    <Content Include="app\angular2\src\app\dashboard\dashboard.component.html" />
+    <Content Include="app\angular2\src\app\nav\nav.component.css" />
+    <Content Include="app\angular2\src\app\nav\nav.component.html" />
+    <Content Include="app\angular2\src\app\organizations\organization-list\organization-list.component.css" />
+    <Content Include="app\angular2\src\app\organizations\organization-list\organization-list.component.html" />
+    <Content Include="app\angular2\src\app\organizations\organization\organization.component.css" />
+    <Content Include="app\angular2\src\app\organizations\organization\organization.component.html" />
+    <Content Include="app\angular2\src\app\page-not-found\page-not-found.component.css" />
+    <Content Include="app\angular2\src\app\page-not-found\page-not-found.component.html" />
+    <Content Include="app\angular2\src\app\people\person-list\person-list.component.css" />
+    <Content Include="app\angular2\src\app\people\person-list\person-list.component.html" />
+    <Content Include="app\angular2\src\app\people\person\person.component.css" />
+    <Content Include="app\angular2\src\app\people\person\person.component.html" />
+    <Content Include="app\angular2\src\favicon.ico" />
+    <Content Include="app\angular2\src\index.html" />
+    <Content Include="app\angular2\src\styles.css" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -284,6 +306,16 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="app\angular2\.angular-cli.json" />
+    <Content Include="app\angular2\.editorconfig" />
+    <Content Include="app\angular2\e2e\tsconfig.e2e.json" />
+    <Content Include="app\angular2\package.json" />
+    <Content Include="app\angular2\README.md" />
+    <Content Include="app\angular2\src\assets\.gitkeep" />
+    <Content Include="app\angular2\src\tsconfig.app.json" />
+    <Content Include="app\angular2\src\tsconfig.spec.json" />
+    <Content Include="app\angular2\tsconfig.json" />
+    <Content Include="app\angular2\tslint.json" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -331,6 +363,34 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\angular2\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="app\angular2\e2e\app.po.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\app.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\app.module.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\dashboard\dashboard.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\nav\nav.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\nav\nav.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\organizations\organization-list\organization-list.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\organizations\organization-list\organization-list.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\organizations\organization\organization.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\organizations\organization\organization.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\page-not-found\page-not-found.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\page-not-found\page-not-found.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\people\person-list\person-list.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\people\person-list\person-list.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\people\person\person.component.spec.ts" />
+    <TypeScriptCompile Include="app\angular2\src\app\people\person\person.component.ts" />
+    <TypeScriptCompile Include="app\angular2\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="app\angular2\src\environments\environment.ts" />
+    <TypeScriptCompile Include="app\angular2\src\main.ts" />
+    <TypeScriptCompile Include="app\angular2\src\polyfills.ts" />
+    <TypeScriptCompile Include="app\angular2\src\test.ts" />
+    <TypeScriptCompile Include="app\angular2\src\typings.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

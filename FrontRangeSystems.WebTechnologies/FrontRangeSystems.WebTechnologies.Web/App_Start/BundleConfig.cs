@@ -35,13 +35,13 @@ namespace FrontRangeSystems.WebTechnologies.Web
                 .IncludeDirectory("~/app/angular1", js, true)
             );
 
-            bundles.Add(new ScriptBundle("~/Angular/2").Include(
-                "~/app/angular2/dist/inline.bundle.js",
-                "~/app/angular2/dist/polyfills.bundle.js",
-                "~/app/angular2/dist/styles.bundle.js",
-                "~/app/angular2/dist/vendor.bundle.js",
-                "~/app/angular2/dist/main.bundle.js"
-            ));
+//            bundles.Add(new ScriptBundle("~/Angular/2").Include(
+//                "~/app/dist/inline.bundle.js",
+//                "~/app/dist/polyfills.bundle.js",
+//                "~/app/dist/styles.bundle.js",
+//                "~/app/dist/vendor.bundle.js",
+//                "~/app/dist/main.bundle.js"
+//            ));
         }
     }
 }
