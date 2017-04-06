@@ -17,6 +17,7 @@ import { OrganizationService } from "app/services/organization.service";
 export class OrganizationComponent implements OnInit {
 
     constructor(private route: ActivatedRoute,
+        private router: Router,
         private builder: FormBuilder,
         private organizationService: OrganizationService) {
     }
@@ -24,6 +25,7 @@ export class OrganizationComponent implements OnInit {
     private organization: Organization;
     private organizationForm: FormGroup;
     private id: number;
+    private showModel: boolean;
 
     ngOnInit() {
         this.route.params
@@ -92,17 +94,21 @@ export class OrganizationComponent implements OnInit {
         this.organization = this.organizationForm.value;
         if (isNaN(this.id)) {
             this.organizationService.create(this.organization)
-                .then(this.goBack); 
+                .then(() => this.goBack());
         }
         else {
             this.organization.organizationId = this.id;
             this.organizationService.update(this.organization)
-                .then(this.goBack);
+                .then(() => this.goBack());
         }
     }
 
     private goBack() {
-        alert('back');
+        this.router.navigate(['organizations']);
+    }
+
+        toggleShowModel() {
+        this.showModel = !this.showModel;
     }
 
     formErrors = {

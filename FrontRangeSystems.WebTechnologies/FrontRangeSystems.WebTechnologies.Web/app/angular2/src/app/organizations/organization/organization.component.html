@@ -1,3 +1,7 @@
+<h2>{{id ? "Edit" : "Create"}} Organization</h2>
+
+<div class="container row"><label><input type="checkbox" [(ngModel)]="showModel" (click)="toggleShowModel()" /> Show Model</label></div>
+
 <div *ngIf="organization">
     <h2>Details for {{organization.name | uppercase}}</h2>
     <form [formGroup]="organizationForm" *ngIf="organization" (ngSubmit)="onSubmit()">
@@ -10,8 +14,8 @@
         </div>
         <div class="form-group">
             <input type="submit" value="Save" class="btn btn-primary" />
-            <input type="button" value="Cancel" class="btn btn-default" />
+            <input type="button" value="Cancel" class="btn btn-default" (click)="goBack()" />
         </div>
     </form>
-    <pre>{{organization | json}}</pre>
+    <pre class="visible" [class.hidden]="!showModel">{{organization | json}}</pre>
 </div>

@@ -1,4 +1,8 @@
+<h2>Organization List</h2>
+
 <div class="container row"><label><input type="checkbox" [(ngModel)]="showModel" (click)="toggleShowModel()" /> Show Model</label></div>
+
+<a [routerLink]="['/organization', 'new']" class="btn btn-success ng-scope"><span class="glyphicon glyphicon-plus"></span> Create New</a>
 
 <table class="table table-striped">
     <thead>
@@ -13,7 +17,7 @@
             <td>{{org.organizationId}}</td>
             <td><a [routerLink]="['/organization', org.organizationId]">{{org.name}}</a></td>
             <td>
-                <button (click)="delete(org.organizationId)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <button (click)="delete(org)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button>
             </td>
         </tr>
     </tbody>
