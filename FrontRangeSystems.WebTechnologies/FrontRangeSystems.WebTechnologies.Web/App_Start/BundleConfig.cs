@@ -25,14 +25,14 @@ namespace FrontRangeSystems.WebTechnologies.Web
 
             var js = "*.js";
 
-            bundles.Add(new ScriptBundle("~/Angular/1x").Include(
+            bundles.Add(new ScriptBundle("~/Client/AngularJS").Include(
                     "~/scripts/angular.js",
                     "~/scripts/angular-route.js",
                     "~/scripts/angular-ui-router.js",
                     "~/scripts/angular-resource.js")
-                .IncludeDirectory("~/app/angular1/services", js, true)
-                .IncludeDirectory("~/app/angular1", js, false)
-                .IncludeDirectory("~/app/angular1", js, true)
+                .IncludeDirectory("~/app/angularjs/services", js, true)
+                .IncludeDirectory("~/app/angularjs", js, false)
+                .IncludeDirectory("~/app/angularjs", js, true)
             );
 
 //            bundles.Add(new ScriptBundle("~/Angular/2").Include(

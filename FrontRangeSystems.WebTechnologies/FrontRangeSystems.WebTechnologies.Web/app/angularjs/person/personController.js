@@ -55,7 +55,7 @@ app.controller("personController",
         }
 
         function goBack() {
-            $location.path("angular1/person");
+            $location.path("angularjs/person");
         }
     }
 ]);

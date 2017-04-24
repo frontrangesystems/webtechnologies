@@ -4,7 +4,7 @@
 
 <div class="container row"><label><input type="checkbox" ng-click="showModel = !showModel" /> Show Model</label></div>
 
-<a href="/angular1/organization/0" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Create New</a>
+<a href="/angularjs/organization/0" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Create New</a>
 
 <table ng-show="organizations" class="table table-striped">
     <thead>
@@ -17,7 +17,7 @@
     <tbody>
     <tr ng-repeat="org in organizations">
         <td>{{org.organizationId}}</td>
-        <td><a ng-href="/angular1/organization/{{org.organizationId}}">{{org.name}}</a></td>
+        <td><a ng-href="/angularjs/organization/{{org.organizationId}}">{{org.name}}</a></td>
         <td><a ng-click="delete(org)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
     </tr>
     </tbody>

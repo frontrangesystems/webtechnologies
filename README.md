@@ -2,32 +2,34 @@
 
 This project is intended for .Net developers who are looking for some comparisons between technologies. Use it, learn it, and feel free to take what you have learned to new and exciting projects.
 
+>**Note:** Angular 1.x apps are referred to AngularJS, whereas Angular 2+ apps are reffered to as Angular.
+
 ## Setup
 
-### MVC and Angular 1.x
+### MVC and AngularJS
 
 1. Open solution in Visual Studio
 2. Hit `Ctrl + F5` to run or `F5` to debug
     >**Note:** Visual Studio will download all required Nuget packages as part of the build
 
-### Angular 2
+### Angular
 
 1. Install Node by running the install pacckage found [here](https://nodejs.org/)
 . Open a command prompt
 3. Navigate to the directory `FrontRangeSystems.WebTechnologies\FrontRangeSystems.WebTechnologies.Web\app\angular2` under the Git working directory
 4. Restore packages with the command `npm i`
 5. Install Angular CLI with the command `npm install -g @angular/cli`
-6. Build the Angular 2 app with the command `ng build`
+6. Build the Angular app with the command `ng build`
     >**Note:** If you would like to have the ng build watch for changes, run the command `ng build --watch`
 7. Hit `Ctrl + F5` to run or `F5` to debug
 
 ## References
 
-* Angular 1.x
+* AngularJS
     * [Main Site](https://angularjs.org/)
     * [Developer Guide](https://docs.angularjs.org/guide)
     * [API Documentation](https://docs.angularjs.org/api)
-* Angular 2+
+* Angular
     * [Main Site](https://angular.io/)
     * [Guide](https://angular.io/docs/ts/latest/guide/)
     * [Docs](https://angular.io/docs/ts/latest/)

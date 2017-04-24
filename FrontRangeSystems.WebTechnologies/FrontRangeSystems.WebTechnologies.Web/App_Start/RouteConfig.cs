@@ -9,7 +9,7 @@ namespace FrontRangeSystems.WebTechnologies.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("angular1", "angular1/{*catchall}", new { controller = "Home", action = "Angular1" });
+            routes.MapRoute("angularjs", "angularjs/{*catchall}", new { controller = "Home", action = "angularjs" });
             routes.MapRoute("angular2", "angular2/{*catchall}", new { controller = "Home", action = "Angular2" });
 
             routes.MapRoute(

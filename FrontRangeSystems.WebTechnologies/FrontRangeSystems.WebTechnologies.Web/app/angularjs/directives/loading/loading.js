@@ -9,7 +9,7 @@ angular.module("app")
                 scope: {
                     loading: "="
                 },
-                templateUrl: "/app/angular1/directives/loading/loading.html"
+                templateUrl: "/app/angularjs/directives/loading/loading.html"
             };
         }
     ]);

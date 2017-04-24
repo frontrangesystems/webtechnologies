@@ -40,7 +40,7 @@ app.controller("organizationController",
         }
 
         function goBack() {
-            $location.path("angular1/organization");
+            $location.path("angularjs/organization");
         }
     }
 ]);

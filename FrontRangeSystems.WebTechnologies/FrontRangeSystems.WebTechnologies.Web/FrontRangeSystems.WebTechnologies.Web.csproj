@@ -219,22 +219,22 @@
     <Compile Include="Services\PersonService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\angular1\app.js" />
-    <Content Include="app\angular1\directives\loading\loading.js" />
-    <Content Include="app\angular1\directives\loading\loading.html" />
-    <Content Include="app\angular1\nav\index.html" />
-    <Content Include="app\angular1\organization\index.html" />
-    <Content Include="app\angular1\organization\organizationController.js" />
-    <Content Include="app\angular1\organization-list\index.html" />
-    <Content Include="app\angular1\organization-list\organizationListController.js" />
-    <Content Include="app\angular1\home\index.html" />
-    <Content Include="app\angular1\home\homeController.js" />
-    <Content Include="app\angular1\person-list\index.html" />
-    <Content Include="app\angular1\person-list\personListController.js" />
-    <Content Include="app\angular1\person\personController.js" />
-    <Content Include="app\angular1\person\index.html" />
-    <Content Include="app\angular1\services\personService.js" />
-    <Content Include="app\angular1\services\organizationService.js" />
+    <Content Include="app\angularjs\app.js" />
+    <Content Include="app\angularjs\directives\loading\loading.js" />
+    <Content Include="app\angularjs\directives\loading\loading.html" />
+    <Content Include="app\angularjs\nav\index.html" />
+    <Content Include="app\angularjs\organization\index.html" />
+    <Content Include="app\angularjs\organization\organizationController.js" />
+    <Content Include="app\angularjs\organization-list\index.html" />
+    <Content Include="app\angularjs\organization-list\organizationListController.js" />
+    <Content Include="app\angularjs\home\index.html" />
+    <Content Include="app\angularjs\home\homeController.js" />
+    <Content Include="app\angularjs\person-list\index.html" />
+    <Content Include="app\angularjs\person-list\personListController.js" />
+    <Content Include="app\angularjs\person\personController.js" />
+    <Content Include="app\angularjs\person\index.html" />
+    <Content Include="app\angularjs\services\personService.js" />
+    <Content Include="app\angularjs\services\organizationService.js" />
     <Content Include="app\angular2\.gitignore" />
     <Content Include="app\angular2\karma.conf.js" />
     <Content Include="app\angular2\protractor.conf.js" />
@@ -342,7 +342,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Angular2.cshtml" />
-    <Content Include="Views\Home\Angular1.cshtml" />
+    <Content Include="Views\Home\AngularJs.cshtml" />
     <Content Include="Views\Home\Mvc.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Person\Create.cshtml" />
