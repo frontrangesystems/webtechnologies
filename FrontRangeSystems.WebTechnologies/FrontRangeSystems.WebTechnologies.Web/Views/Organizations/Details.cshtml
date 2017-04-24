@@ -1,17 +1,10 @@
-﻿@model FrontRangeSystems.WebTechnologies.Web.Entity.Organization
+﻿@model FrontRangeSystems.WebTechnologies.Web.Models.OrganizationModel
 
 @{
-    Layout = null;
+    ViewBag.Title ="Details";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h1>@ViewBag.Title</h1>
+@Html.Partial("_MvcNav")
     <div>
         <h4>Organization</h4>
         <hr />
@@ -27,8 +20,6 @@
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OrganizationId }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
-</body>
-</html>

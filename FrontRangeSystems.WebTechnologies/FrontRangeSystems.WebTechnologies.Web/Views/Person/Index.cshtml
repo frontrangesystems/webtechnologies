@@ -3,11 +3,12 @@
 @{ ViewBag.Title = "People"; }
 
 <h1>@ViewBag.Title</h1>
+@Html.Partial("_MvcNav")
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)

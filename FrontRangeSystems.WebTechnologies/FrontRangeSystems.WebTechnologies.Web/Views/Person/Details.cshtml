@@ -1,6 +1,8 @@
 ﻿@model FrontRangeSystems.WebTechnologies.Web.Models.PersonModel
 @{ ViewBag.Title = "Details"; }
+
 <h1>@ViewBag.Title</h1>
+@Html.Partial("_MvcNav")
 
 <div>
     <h4>PersonModel</h4>
@@ -25,6 +27,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new {id = Model.Id}) |
+    @Html.ActionLink("Edit", "Edit", new {id = Model.PersonId}) |
     @Html.ActionLink("Back to List", "Index")
 </p>

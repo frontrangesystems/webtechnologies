@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <base href="/angular2"/>
+    <base href="/angular"/>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,7 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("MVC", "Index", "Person", new {area=""}, null)</li>
                     <li><a href="/angularjs">AngularJS</a></li>
-                    <li><a href="/angular2">Angular</a></li>
+                    <li><a href="/angular">Angular</a></li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
             </div>

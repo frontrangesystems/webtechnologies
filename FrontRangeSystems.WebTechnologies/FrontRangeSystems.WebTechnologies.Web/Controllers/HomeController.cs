@@ -20,7 +20,7 @@ namespace FrontRangeSystems.WebTechnologies.Web.Controllers
             return View();
         }
 
-        public ActionResult Angular2()
+        public ActionResult Angular()
         {
             return View();
         }

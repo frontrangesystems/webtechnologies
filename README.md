@@ -16,7 +16,7 @@ This project is intended for .Net developers who are looking for some comparison
 
 1. Install Node by running the install pacckage found [here](https://nodejs.org/)
 . Open a command prompt
-3. Navigate to the directory `FrontRangeSystems.WebTechnologies\FrontRangeSystems.WebTechnologies.Web\app\angular2` under the Git working directory
+3. Navigate to the directory `FrontRangeSystems.WebTechnologies\FrontRangeSystems.WebTechnologies.Web\app\angular` under the Git working directory
 4. Restore packages with the command `npm i`
 5. Install Angular CLI with the command `npm install -g @angular/cli`
 6. Build the Angular app with the command `ng build`

@@ -2,7 +2,7 @@
 
 ## Using With .Net
 
-This project is only the Angular 2 front end. to build execute `ng build --watch`. This will place it in the 'app/angular2' folder of the FrontRangeSystems.WebTechnologies.Web project. Another approach found here (http://rostacik.net/2015/08/14/how-to-disable-building-of-typescript-files-in-visual-studio-2015/) is to add `<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>` to the first `<PropertyGroup>` in the project file.
+This project is only the Angular 2 front end. to build execute `ng build --watch`. This will place it in the 'app/angular' folder of the FrontRangeSystems.WebTechnologies.Web project. Another approach found here (http://rostacik.net/2015/08/14/how-to-disable-building-of-typescript-files-in-visual-studio-2015/) is to add `<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>` to the first `<PropertyGroup>` in the project file.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
